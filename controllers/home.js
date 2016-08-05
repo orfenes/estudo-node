@@ -1,4 +1,7 @@
 module.exports = function(app){
+
+  // var Usuario = app.models.usuario;
+
   var HomeController = {
     index: function(req, res){
       res.render('home/index');
@@ -11,7 +14,7 @@ module.exports = function(app){
       if (email && nome) {
         var usuario = req.body.usuario;
         usuario['contatos'] = [];
-        req.session.usuuario = usuario;
+        req.session.usuario = usuario;
         res.redirect('/contatos');
       }else{
         res.redirect('/');

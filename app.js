@@ -2,10 +2,18 @@ var  express = require('express'),
      load = require('express-load'),
      app = express();
 
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-// app.use(express.static(__dirname + '/public'));
+app.use(cookieParser('Ntalk'));
+app.use(session());
+app.use(bodyParser());
+
 
 load('models')
   .then('controllers')
