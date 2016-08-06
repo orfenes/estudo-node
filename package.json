@@ -14,6 +14,9 @@
     "express": "~4.13.4",
     "express-load": "1.1.7",
     "morgan": "~1.7.0",
+    "cookie-parser": "*",
+    "express-session": "*",
+    "body-parser": "*",
     "serve-favicon": "~2.3.0"
   }
 }

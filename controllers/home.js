@@ -25,7 +25,6 @@ module.exports = function(app){
       req.session.destroy();
       res.redirect('/');
     }
-
   };
 
 

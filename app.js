@@ -13,6 +13,8 @@ app.set('view engine', 'ejs');
 app.use(cookieParser('Ntalk'));
 app.use(session());
 app.use(bodyParser());
+app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '../public'));
 
 
 load('models')
